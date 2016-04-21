@@ -1,4 +1,4 @@
-# Low Hanging Fruit @ Davidson College
-This is a project to identify the low hanging fruit when it comes to APIs on campus at Davidson College.
-You can view the site at: http://low-hanging-fruit.github.io/davidson-college/
-You can contribute using the Github issues for this project.
+# Create Your First APIs.json File
+This is a micro tool for helping you create your first APIs.json file.
+
+You can view the site at: http://create.your.first.apis.json.file.tools.apievangelist.com.
