@@ -21,7 +21,7 @@ tags_path : /tags.html
 
 # Masthead title
 masthead_link: http://create.your.first.apis.json.file.tools.apievangelist.com
-masthead_font_size: 55
+masthead_font_size: 65
 masthead_title: '{"Create APIs.json File"}'
 
 # Feature
