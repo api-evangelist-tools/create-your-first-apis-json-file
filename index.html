@@ -206,7 +206,7 @@ function BuildAPIsJSON()
     var year = date.getFullYear();
 
     if(monthIndex<10){ monthIndex = '0' + monthIndex; }
-    console.log(monthIndex);
+
     $created_date = year  + '-' + monthIndex + '-' + day;
     $MasterAPISJSON['created'] = $created_date;
     $MasterAPISJSON['modified'] = $created_date;
