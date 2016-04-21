@@ -142,6 +142,11 @@ title: Create Your First APIs.json File
 
 <script type="text/jscript">
 
+//
+// This is meant to be a very verbose, hackable script that you can change and make yours.
+// Do what you need to make it create exactly the APIs.json file you will need for your platform.
+//
+
 function BuildAPIsJSON()
     {
     $MasterAPISJSON = {};
@@ -177,7 +182,7 @@ function BuildAPIsJSON()
     $apisJSONContactTwitter = document.getElementById("contact-twitter").value;
     $apisJSONContactEmail = document.getElementById("contact-email").value;
 
-    $MasterAPISJSON['name'] = $apisJSONTagArray;
+    $MasterAPISJSON['name'] = $apisJSONName;
 
     // description
     if($apisJSONDescription!='')
@@ -329,20 +334,17 @@ function BuildAPIsJSON()
         $APIArray['tags'] = $apisJSONAPITagArray;
         }
 
-
     $APIArray['contact'] = $ContactArray;
-
     $MasterAPISJSON['apis'].push($APIArray);
-
     $MasterAPISJSON['include'] = [];
-
     $MasterAPISJSON['maintainers'] =  $ContactArray;
-
     $MasterAPISJSON['url'] = $apisJSONUrl;
 
+    // Publish to Viewer
     $viewer = JSON.stringify($MasterAPISJSON, null, 4);
     document.getElementById("jsonViewerDetails").value = $viewer;
 
+    // Show the Modal
     $('#apisJSONModal').modal('show');
     }
 
