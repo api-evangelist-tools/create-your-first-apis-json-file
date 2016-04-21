@@ -34,7 +34,7 @@ feature_image_width: 40
 banner_title: API Evangelist
 banner_link: http://apievangelist.com
 banner_image_source: http://kinlane-productions.s3.amazonaws.com/api-evangelist/api-evangelist-logo-400.png
-banner_image_width: 50
+banner_image_width: 75
 
 # Project
 project_image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-design.png
