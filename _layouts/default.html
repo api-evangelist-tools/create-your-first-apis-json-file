@@ -156,7 +156,7 @@
           url: $get_banner_project_url,
           type:"GET",
           success:function(data) {
-
+              console.log(data);
               $banner_title = data['banner_title'];
               $banner_image = data['banner_image'];
               $banner_url = data['banner_url'];
