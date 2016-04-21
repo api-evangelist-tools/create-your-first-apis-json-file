@@ -1,6 +1,6 @@
-title:        Template
-url:          http://template.apievangelist.com
-logo:         https://s3.amazonaws.com/kinlane-productions/api-evangelist/api-evangelist-design.png
+title:        Create Your First APIs.json File
+url:          http://create.your.first.apis.json.file.tools.apievangelist.com
+logo:         http://kinlane-productions.s3.amazonaws.com/api-evangelist/api-evangelist-logo-400.png
 logo_width:   80
 logo_bottom_padding: 10
 
@@ -20,15 +20,21 @@ categories_path : /categories.html
 tags_path : /tags.html
 
 # Masthead title
-masthead_link: http://design.apievangelist.com
-masthead_font_size: 65
-masthead_title: '{"API Design"}'
+masthead_link: http://create.your.first.apis.json.file.tools.apievangelist.com
+masthead_font_size: 55
+masthead_title: '{"Create APIs.json File"}'
 
 # Feature
 feature_title: API Guide
 feature_link: http://apievangelist.com
 feature_image_source: https://s3.amazonaws.com/kinlane-productions/whitepapers/api-guides-loading.jpg
 feature_image_width: 40
+
+# Banner
+banner_title: API Evangelist
+banner_link: http://apievangelist.com
+banner_image_source: http://kinlane-productions.s3.amazonaws.com/api-evangelist/api-evangelist-logo-400.png
+banner_image_width: 50
 
 # Project
 project_image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-design.png

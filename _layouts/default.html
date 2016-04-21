@@ -62,7 +62,12 @@
         <a href="/support/">Support This Project</a>
       </div>
 
-      <p align="center"><a href="{{ site.url }}"><img src="{{ site.logo }}" align="center" width="{{ site.logo_width }}%" style="padding-bottom: {{ site.logo_bottom_padding }}px;" /></a></p>
+      <!-- Banner -->
+      <p align="center">
+        <a href="{{ site.banner_link }}" target="_blank" id="banner_project_link">
+          <img id="banner_project_image" src="{{ site.banner_image_source }}" width="{{ site.banner_image_width }}%" title="{{ site.banner_title }}" />
+        </a>
+      </p>
 
       {{ content }}
 
@@ -138,9 +143,30 @@
               $("#feature_project_image").attr("src", $feature_image);
               $("#feature_project_image").attr("title", $feature_title);
             }
-        });
+          });
         }
     featureProjects();
+
+    // Banner Projects
+    function bannerProjects()
+        {
+        $get_banner_project_url = "http://project.api.kinlane.com/project/banner/";
+
+        $.ajax({
+          url: $get_banner_project_url,
+          type:"GET",
+          success:function(data) {
+
+              $banner_title = data['banner_title'];
+              $banner_image = data['banner_image'];
+              $banner_url = data['banner_url'];
+              $("#banner_project_link").attr("href", $banner_url);
+              $("#banner_project_image").attr("src", $banner_image);
+              $("#banner_project_image").attr("title", $banner_title);
+            }
+          });
+        }
+    bannerProjects();
 
   </script>
 
