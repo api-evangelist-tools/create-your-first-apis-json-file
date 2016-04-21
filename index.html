@@ -210,8 +210,8 @@ function BuildAPIsJSON()
     var monthIndex = date.getMonth();
     var year = date.getFullYear();
 
+    // Set the dates
     if(monthIndex<10){ monthIndex = '0' + monthIndex; }
-
     $created_date = year  + '-' + monthIndex + '-' + day;
     $MasterAPISJSON['created'] = $created_date;
     $MasterAPISJSON['modified'] = $created_date;
@@ -220,6 +220,7 @@ function BuildAPIsJSON()
 
     $MasterAPISJSON['apis'] = [];
 
+    // Build a contact array
     $ContactArray = {};
     $ContactArray['FN'] = $apisJSONAPIName;
     $ContactArray['X-twitter'] = $apisJSONAPIName;
