@@ -38,19 +38,7 @@
             </a>
             {% endraw %}
         </script>
-        <script type="text/javascript">
-        function listSponsors(){
-            $.getJSON('{{ site.sponsors_json_url }}', function(data) {
-                $.each(data['sponsors'], function(key, val) {
-                var template = $('#parterListingTemplate').html();
-                var html = Mustache.to_html(template, val);
-                $('#partnerListingContainer').append(html);
-                });
-            });
-          }
-        </script>
         <div id="partnerListingContainer" align="center" style="background-color:#FFF; margin-top: {{ site.sponsors_margin_top }}px; padding: 15px; width: 50%; border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; border: 3px solid #FFFFFF; margin-bottom: 2px;"></div>
-        <script type="text/javascript">listSponsors();</script>
         <!-- Sponsorship -->
 
       </div>
@@ -64,7 +52,7 @@
 
       <!-- Banner -->
       <p align="center">
-        <a href="{{ site.banner_link }}" target="_blank" id="banner_project_link">
+        <a href="" target="_blank" id="banner_project_link">
           <img id="banner_project_image" src="{{ site.banner_image_source }}" width="{{ site.banner_image_width }}%" title="{{ site.banner_title }}" style="border: 1px solid #000;" />
         </a>
       </p>
@@ -122,6 +110,7 @@
 	</noscript>
 
   <script type="text/javascript">
+
     // project view log
   	$url = "http://project.api.kinlane.com/project/view/";
   	$vlog = $.post($url, function() {});
@@ -170,6 +159,19 @@
           });
         }
     bannerProjects();
+
+    // Sponsors
+    function listSponsors(){
+        $.getJSON('{{ site.sponsors_json_url }}', function(data) {
+            $.each(data['sponsors'], function(key, val) {
+            var template = $('#parterListingTemplate').html();
+            var html = Mustache.to_html(template, val);
+            $('#partnerListingContainer').append(html);
+            });
+        });
+      }
+
+    listSponsors();
 
   </script>
 
